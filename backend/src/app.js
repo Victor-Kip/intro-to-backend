@@ -4,9 +4,10 @@ const app = express();
 app.use(express.json())
 
 //import routes
-import router from './routes/user.route.js'
+import userRouter from './routes/user.route.js'
+import postRouter from './routes/post.route.js'
 
 //declare routes
-app.use("/api/v1/users",router)
-
+app.use("/api/v1/users",userRouter)
+app.use("/api/v1/posts",postRouter)
 export default app;
